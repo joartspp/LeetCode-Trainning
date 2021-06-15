@@ -6,15 +6,20 @@ const countBits = function(n) {
             let num = parseInt(i);
             let byte = num.toString(2);
             let now = 0;
-            for (let k = 0 ; k <= byte.length ; k ++) {
+            for (let k = 0 ; k < byte.length ; k ++) {
                 now = now + (parseInt(byte.charAt(k)));
-                if (!isNaN(now)){
-                    output.push(now)
-                }
             }
+            output.push(now);
         }
-        console.log(output);
+        return output;
     }
 };
 
 countBits(5);
+
+
+/*
+----Result----
+Runtime: 132 ms, faster than 41.95% of JavaScript online submissions for Counting Bits.
+Memory Usage: 46.2 MB, less than 35.73% of JavaScript online submissions for Counting Bits.
+*/
